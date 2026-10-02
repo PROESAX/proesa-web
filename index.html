@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PROESA | CCTV, Redes, Control de Acceso y SNE</title>
+
+    <meta name="description"
+          content="PROESA - Soluciones integrales en CCTV, redes, control de acceso y sistemas neumáticos de envío.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+
+:root {
+    --primary-dark: #0A192F;
+    --primary-blue: #000BCE;
+    --secondary-light: #F4F7FA;
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+    --white: #FFFFFF;
+    --accent-green: #25D366;
+    --transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow:
+        0 2px 12px rgba(0,0,0,0.08);
+
+    border-bottom:
+        3px solid var(--primary-blue);
+}
+
+nav {
+    min-height: 105px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    display: block;
+
+    width: auto;
+
+    height: 85px;
+
+    max-width: 300px;
+
+    object-fit: contain;
+}
+
+
+/* MENÚ PC */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    list-style: none;
+
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--primary-dark);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+
+/* BOTÓN HAMBURGUESA */
+
+.menu-toggle {
+    display: none;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: var(--primary-dark);
+
+    font-size: 1.7rem;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    color: var(--primary-blue);
+
+    background-color: var(--secondary-light);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    background:
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(0,11,206,0.55),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #071426 0%,
+            #0A192F 55%,
+            #000438 100%
+        );
+
+    color: var(--white);
+
+    padding: 7rem 0 6rem;
+
+    text-align: center;
+}
+
+
+.hero h1 {
+
+    max-width: 950px;
+
+    margin:
+        0 auto 1.2rem;
+
+    font-size:
+        clamp(2.1rem, 5vw, 3.4rem);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+
+.hero-description {
+
+    max-width: 800px;
+
+    margin:
+        0 auto 1.2rem;
+
+    font-size: 1.15rem;
+
+    color: #CBD5E1;
+}
+
+
+.hero-services {
+
+    margin-bottom: 2.5rem;
+
+    color: var(--white);
+
+    font-weight: 700;
+
+    font-size: 1rem;
+
+    letter-spacing: 1px;
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    min-height: 48px;
+
+    padding:
+        0.9rem 1.8rem;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.btn-primary {
+
+    background-color:
+        var(--primary-blue);
+
+    color: var(--white);
+}
+
+
+.btn-primary:hover {
+
+    background-color: #0008A3;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.btn-whatsapp {
+
+    background-color:
+        var(--accent-green);
+
+    color: var(--white);
+}
+
+
+.btn-whatsapp:hover {
+
+    background-color: #1ebc57;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+section {
+
+    padding:
+        5rem 0;
+
+    scroll-margin-top:
+        105px;
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom:
+        3rem;
+}
+
+
+.section-title h2 {
+
+    font-size:
+        clamp(1.8rem, 4vw, 2.2rem);
+
+    color:
+        var(--primary-dark);
+
+    margin-bottom:
+        0.6rem;
+}
+
+
+.section-title p {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        1rem;
+
+    max-width:
+        750px;
+
+    margin:
+        auto;
+}
+
+
+/* =========================================
+   SERVICIOS
+========================================= */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1.5rem;
+}
+
+
+.service-card {
+
+    background-color:
+        var(--white);
+
+    border:
+        1px solid #E2E8F0;
+
+    border-radius:
+        10px;
+
+    padding:
+        2rem 1.5rem;
+
+    text-align:
+        center;
+
+    transition:
+        var(--transition);
+}
+
+
+.service-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.09);
+
+    border-color:
+        var(--primary-blue);
+}
+
+
+.service-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin:
+        0 auto 1.3rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color:
+        #F0F3FF;
+
+    color:
+        var(--primary-blue);
+
+    font-size:
+        2rem;
+}
+
+
+.service-card h3 {
+
+    color:
+        var(--primary-dark);
+
+    font-size:
+        1.25rem;
+
+    margin-bottom:
+        0.8rem;
+}
+
+
+.service-card p {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.94rem;
+}
+
+
+/* =========================================
+   CLIENTES
+========================================= */
+
+.clients-section {
+
+    background-color:
+        var(--secondary-light);
+}
+
+
+.clients-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1.5rem;
+}
+
+
+.client-card {
+
+    min-height:
+        160px;
+
+    background-color:
+        var(--white);
+
+    border:
+        1px solid #E2E8F0;
+
+    border-radius:
+        10px;
+
+    padding:
+        1.5rem;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    transition:
+        var(--transition);
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.04);
+}
+
+
+.client-card:hover {
+
+    border-color:
+        var(--primary-blue);
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+.client-card img {
+
+    display:
+        block;
+
+    width:
+        auto;
+
+    height:
+        auto;
+
+    max-width:
+        180px;
+
+    max-height:
+        90px;
+
+    object-fit:
+        contain;
+
+    transition:
+        var(--transition);
+}
+
+
+.client-card:hover img {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.contact-container {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        4rem;
+
+    align-items:
+        start;
+}
+
+
+.contact-info h3 {
+
+    color:
+        var(--primary-dark);
+
+    font-size:
+        1.6rem;
+
+    margin-bottom:
+        1rem;
+}
+
+
+.contact-info > p {
+
+    color:
+        var(--text-muted);
+
+    margin-bottom:
+        2rem;
+}
+
+
+.info-item {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        1rem;
+
+    margin-bottom:
+        1.4rem;
+}
+
+
+.info-item i {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--primary-blue);
+
+    background-color:
+        var(--secondary-light);
+
+    border-radius:
+        50%;
+}
+
+
+.info-item a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+    word-break:
+        break-word;
+}
+
+
+.info-item a:hover {
+
+    color:
+        var(--primary-blue);
+}
+
+
+/* FORMULARIO */
+
+.contact-form {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        1.2rem;
+
+    padding:
+        2rem;
+
+    border-radius:
+        10px;
+
+    background-color:
+        var(--secondary-light);
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width:
+        100%;
+
+    padding:
+        0.9rem 1rem;
+
+    border:
+        1px solid #CBD5E1;
+
+    border-radius:
+        6px;
+
+    outline:
+        none;
+
+    background:
+        var(--white);
+
+    font-family:
+        inherit;
+
+    font-size:
+        16px;
+
+    transition:
+        var(--transition);
+}
+
+
+.form-group textarea {
+
+    resize:
+        vertical;
+
+    min-height:
+        130px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color:
+        var(--primary-blue);
+
+    box-shadow:
+        0 0 0 3px rgba(0,11,206,0.08);
+}
+
+
+.contact-form .btn {
+
+    width:
+        100%;
+}
+
+
+/* =========================================
+   WHATSAPP FLOTANTE
+========================================= */
+
+.whatsapp-float {
+
+    position:
+        fixed;
+
+    right:
+        24px;
+
+    bottom:
+        24px;
+
+    width:
+        60px;
+
+    height:
+        60px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background-color:
+        var(--accent-green);
+
+    color:
+        var(--white);
+
+    border-radius:
+        50%;
+
+    font-size:
+        2rem;
+
+    text-decoration:
+        none;
+
+    z-index:
+        999;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.22);
+
+    transition:
+        var(--transition);
+}
+
+
+.whatsapp-float:hover {
+
+    transform:
+        scale(1.08);
+
+    background-color:
+        #1ebc57;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background-color:
+        var(--primary-dark);
+
+    color:
+        var(--white);
+
+    padding:
+        2rem 0;
+
+    text-align:
+        center;
+
+    font-size:
+        0.9rem;
+}
+
+
+footer p {
+
+    opacity:
+        0.9;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .services-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .clients-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .contact-container {
+
+        gap:
+            2.5rem;
+
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL / TABLET PEQUEÑA
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+
+        width:
+            92%;
+
+    }
+
+
+    nav {
+
+        min-height:
+            80px;
+
+        position:
+            relative;
+
+    }
+
+
+    .logo-img {
+
+        height:
+            60px;
+
+        max-width:
+            210px;
+
+    }
+
+
+    /* MOSTRAR HAMBURGUESA */
+
+    .menu-toggle {
+
+        display:
+            flex;
+
+    }
+
+
+    /* MENÚ DESPLEGABLE */
+
+    .nav-links {
+
+        position:
+            absolute;
+
+        top:
+            calc(100% + 3px);
+
+        left:
+            -4%;
+
+        width:
+            108%;
+
+        display:
+            none;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            0;
+
+        background-color:
+            var(--white);
+
+        box-shadow:
+            0 10px 20px rgba(0,0,0,0.12);
+
+        border-bottom:
+            3px solid var(--primary-blue);
+
+    }
+
+
+    .nav-links.active {
+
+        display:
+            flex;
+
+    }
+
+
+    .nav-links li {
+
+        width:
+            100%;
+
+    }
+
+
+    .nav-links a {
+
+        display:
+            block;
+
+        width:
+            100%;
+
+        padding:
+            1rem 1.5rem;
+
+        border-bottom:
+            1px solid #E2E8F0;
+
+    }
+
+
+    .nav-links a:hover {
+
+        background-color:
+            var(--secondary-light);
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding:
+            4.8rem 0 4rem;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(2rem, 8vw, 2.7rem);
+
+    }
+
+
+    .hero-description {
+
+        font-size:
+            1rem;
+
+    }
+
+
+    .hero-services {
+
+        font-size:
+            0.9rem;
+
+        line-height:
+            2;
+
+    }
+
+
+    /* CONTACTO */
+
+    .contact-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            2.5rem;
+
+    }
+
+
+    section {
+
+        scroll-margin-top:
+            80px;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 550px) {
+
+    section {
+
+        padding:
+            4rem 0;
+
+    }
+
+
+    .hero {
+
+        padding:
+            4.2rem 0 3.8rem;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    .hero-description {
+
+        font-size:
+            0.98rem;
+
+    }
+
+
+    .hero-services {
+
+        max-width:
+            300px;
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width:
+            100%;
+
+    }
+
+
+    /* SERVICIOS */
+
+    .services-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .service-card {
+
+        padding:
+            1.8rem 1.3rem;
+
+    }
+
+
+    /* CLIENTES */
+
+    .clients-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            1rem;
+
+    }
+
+
+    .client-card {
+
+        min-height:
+            120px;
+
+        padding:
+            1rem;
+
+    }
+
+
+    .client-card img {
+
+        max-width:
+            125px;
+
+        max-height:
+            70px;
+
+    }
+
+
+    /* CONTACTO */
+
+    .contact-form {
+
+        padding:
+            1.3rem;
+
+    }
+
+
+    .info-item {
+
+        gap:
+            0.8rem;
+
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp-float {
+
+        width:
+            56px;
+
+        height:
+            56px;
+
+        right:
+            16px;
+
+        bottom:
+            16px;
+
+        font-size:
+            1.8rem;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULARES MUY PEQUEÑOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .logo-img {
+
+        height:
+            52px;
+
+        max-width:
+            175px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            1.75rem;
+
+    }
+
+
+    .clients-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .client-card img {
+
+        max-width:
+            160px;
+
+        max-height:
+            80px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     ENCABEZADO
+========================================= -->
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a href="#inicio"
+   class="logo">
+
+<img
+    src="./logo-proesa.png"
+    alt="PROESA"
+    class="logo-img"
+>
+
+</a>
+
+
+<!-- BOTÓN HAMBURGUESA -->
+
+<button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+>
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+<!-- MENÚ -->
+
+<ul class="nav-links"
+    id="navLinks">
+
+<li>
+<a href="#inicio">
+Inicio
+</a>
+</li>
+
+<li>
+<a href="#servicios">
+Servicios
+</a>
+</li>
+
+<li>
+<a href="#clientes">
+Clientes
+</a>
+</li>
+
+<li>
+<a href="#contacto">
+Contacto
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================
+     PORTADA
+========================================= -->
+
+<section
+    id="inicio"
+    class="hero"
+>
+
+<div class="container">
+
+
+<h1>
+
+Soluciones Integrales en Tecnología e Infraestructura
+
+</h1>
+
+
+<p class="hero-description">
+
+Diseño, instalación, implementación, soporte y mantenimiento
+de infraestructura tecnológica para empresas e industrias.
+
+</p>
+
+
+<p class="hero-services">
+
+CCTV &nbsp; | &nbsp;
+REDES &nbsp; | &nbsp;
+CONTROL DE ACCESO &nbsp; | &nbsp;
+SNE
+
+</p>
+
+
+<div class="hero-buttons">
+
+
+<a href="#contacto"
+   class="btn btn-primary">
+
+<i class="fa-solid fa-envelope"></i>
+
+Solicitar Cotización
+
+</a>
+
+
+<a href="https://wa.me/525532224994"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn btn-whatsapp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+WhatsApp Directo
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     SERVICIOS
+========================================= -->
+
+<section id="servicios">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Nuestros Servicios
+</h2>
+
+<p>
+
+Soluciones especializadas para infraestructura,
+seguridad y operación tecnológica.
+
+</p>
+
+</div>
+
+
+
+<div class="services-grid">
+
+
+<!-- CCTV -->
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-video"></i>
+
+</div>
+
+<h3>
+CCTV
+</h3>
+
+<p>
+
+Diseño e instalación de sistemas de videovigilancia,
+cámaras IP, grabación, configuración,
+soporte y mantenimiento.
+
+</p>
+
+</div>
+
+
+
+<!-- REDES -->
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-network-wired"></i>
+
+</div>
+
+<h3>
+Redes
+</h3>
+
+<p>
+
+Cableado estructurado UTP y fibra óptica,
+instalación y organización de racks,
+nodos de red, switches y puntos de acceso.
+
+</p>
+
+</div>
+
+
+
+<!-- CONTROL DE ACCESO -->
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-id-card"></i>
+
+</div>
+
+<h3>
+Control de Acceso
+</h3>
+
+<p>
+
+Sistemas de identificación y acceso mediante
+tarjetas, TAG, biometría, videoporteros,
+cerraduras y dispositivos de liberación.
+
+</p>
+
+</div>
+
+
+
+<!-- SNE -->
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-wind"></i>
+
+</div>
+
+<h3>
+SNE
+</h3>
+
+<p>
+
+Sistemas Neumáticos de Envío para el traslado
+interno eficiente de documentos, valores
+y materiales mediante tubería neumática.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     CLIENTES
+========================================= -->
+
+<section
+    id="clientes"
+    class="clients-section"
+>
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Experiencia con nuestros clientes
+</h2>
+
+<p>
+
+Empresas con las que se ha colaborado
+en diferentes proyectos y servicios.
+
+</p>
+
+</div>
+
+
+
+<div class="clients-grid">
+
+
+<!-- SANTANDER -->
+
+<div class="client-card">
+
+<img
+    src="./clientes/santander.png"
+    alt="Santander"
+    loading="lazy"
+>
+
+</div>
+
+
+<!-- BBVA -->
+
+<div class="client-card">
+
+<img
+    src="./clientes/bbva.png"
+    alt="BBVA"
+    loading="lazy"
+>
+
+</div>
+
+
+<!-- AMAZON -->
+
+<div class="client-card">
+
+<img
+    src="./clientes/amazon.png"
+    alt="Amazon"
+    loading="lazy"
+>
+
+</div>
+
+
+<!-- PICAL -->
+
+<div class="client-card">
+
+<img
+    src="./clientes/pical-pantaco.png"
+    alt="Pical Pantaco"
+    loading="lazy"
+>
+
+</div>
+
+
+<!-- ALMER -->
+
+<div class="client-card">
+
+<img
+    src="./clientes/almer.png"
+    alt="ALMER"
+    loading="lazy"
+>
+
+</div>
+
+
+<!-- BETTER CLOUD -->
+
+<div class="client-card">
+
+<img
+    src="./clientes/better-cloud.png"
+    alt="BetterCloud"
+    loading="lazy"
+>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONTACTO
+========================================= -->
+
+<section id="contacto">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>
+Contacto
+</h2>
+
+<p>
+
+Ponte en contacto con nosotros para cotizar tu proyecto.
+
+</p>
+
+</div>
+
+
+
+<div class="contact-container">
+
+
+<!-- INFORMACIÓN -->
+
+<div class="contact-info">
+
+
+<h3>
+
+¿Tienes un proyecto en mente?
+
+</h3>
+
+
+<p>
+
+Déjanos tus datos o contáctanos directamente
+para ofrecerte una solución de acuerdo
+con las necesidades de tu proyecto.
+
+</p>
+
+
+
+<!-- EMAIL -->
+
+<div class="info-item">
+
+<i class="fa-solid fa-envelope"></i>
+
+<div>
+
+<strong>
+Correos electrónicos
+</strong>
+
+<br>
+
+<a href="mailto:contactoproesa@proesax.com">
+
+contactoproesa@proesax.com
+
+</a>
+
+<br>
+
+<a href="mailto:ventas@proesax.com">
+
+ventas@proesax.com
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- TELÉFONO -->
+
+<div class="info-item">
+
+<i class="fa-solid fa-phone"></i>
+
+<div>
+
+<strong>
+Teléfonos de contacto
+</strong>
+
+<br>
+
+<a href="tel:+525532224994">
+
+55 3222 4994
+
+</a>
+
+&nbsp;/&nbsp;
+
+<a href="tel:+525572294791">
+
+55 7229 4791
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- COBERTURA -->
+
+<div class="info-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+
+<strong>
+Cobertura
+</strong>
+
+<br>
+
+<span>
+
+CDMX y Estado de México
+
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- FORMULARIO -->
+
+<form
+    class="contact-form"
+    action="https://formspree.io/f/xbjnqpyz"
+    method="POST"
+>
+
+
+<div class="form-group">
+
+<input
+    type="text"
+    name="nombre"
+    placeholder="Tu nombre o empresa"
+    autocomplete="name"
+    required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<input
+    type="email"
+    name="email"
+    placeholder="Tu correo electrónico"
+    autocomplete="email"
+    required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<input
+    type="tel"
+    name="telefono"
+    placeholder="Tu teléfono de contacto"
+    autocomplete="tel"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<textarea
+    name="mensaje"
+    rows="5"
+    placeholder="Cuéntanos sobre tu proyecto"
+    required
+></textarea>
+
+</div>
+
+
+<button
+    type="submit"
+    class="btn btn-primary"
+>
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Enviar Mensaje
+
+</button>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHATSAPP FLOTANTE
+========================================= -->
+
+<a
+    href="https://wa.me/525532224994"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Contactar a PROESA por WhatsApp"
+    title="WhatsApp PROESA"
+>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+&copy; 2026 PROESA |
+CCTV · Redes · Control de Acceso · SNE.
+Todos los derechos reservados.
+
+</p>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT MENÚ MÓVIL
+========================================= -->
+
+<script>
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+const menuIcon =
+    menuToggle.querySelector("i");
+
+
+menuToggle.addEventListener(
+    "click",
+    function() {
+
+        navLinks.classList.toggle("active");
+
+        const menuAbierto =
+            navLinks.classList.contains("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            menuAbierto
+        );
+
+        if (menuAbierto) {
+
+            menuIcon.classList.remove(
+                "fa-bars"
+            );
+
+            menuIcon.classList.add(
+                "fa-xmark"
+            );
+
+        } else {
+
+            menuIcon.classList.remove(
+                "fa-xmark"
+            );
+
+            menuIcon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+    }
+);
+
+
+/* CERRAR MENÚ AL SELECCIONAR OPCIÓN */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                navLinks.classList.remove(
+                    "active"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuIcon.classList.remove(
+                    "fa-xmark"
+                );
+
+                menuIcon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+        );
+
+    });
+
+
+/* CERRAR MENÚ SI CAMBIA A PANTALLA GRANDE */
+
+window.addEventListener(
+    "resize",
+    function() {
+
+        if (window.innerWidth > 768) {
+
+            navLinks.classList.remove(
+                "active"
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuIcon.classList.remove(
+                "fa-xmark"
+            );
+
+            menuIcon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
